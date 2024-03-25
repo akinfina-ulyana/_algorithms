@@ -1,4 +1,4 @@
-# 1 version
+# 1 version O(n^2)
 
 def findSmallest(arr):
     smallest = arr[0]

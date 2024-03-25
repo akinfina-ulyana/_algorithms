@@ -10,7 +10,7 @@ def findSmallest(arr):
     return smallest_index
 
 
-def Sort_selection(arr):
+def sort_selection(arr):
     newArr = []
     for k in range(len(arr)):
         smallest = findSmallest(arr)
@@ -19,10 +19,19 @@ def Sort_selection(arr):
 
 
 a = [5, 2, 6, 8, 10]
-print(Sort_selection(a))
+print(sort_selection(a))
 
+# 2 version
+def sort_selection2(arr):
+    N = len(arr)
+    for pos in range(0, N-1):
+        for k in range(pos+1, N):
+            if arr[k] < arr[pos]:
+                arr[k], arr[pos] = arr[pos], arr[k]
+    return arr
 
-
+b = [4,5,2,7,8]
+print(sort_selection2(b))
 
 
 
